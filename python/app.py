@@ -5,7 +5,7 @@ import random
 from faker import Faker
 
 fake = Faker()
-host = "localhost"  # instead of "logstash"
+host = "localhost"  
 port = 5000
 
 products = ["Shoes", "T-Shirt", "Laptop", "Bag", "Watch", "Bottle"]
@@ -18,7 +18,7 @@ sock.connect((host, port))
 
 try:
     while True:
-        if random.random() < 0.15:  # ~15% chance to log an error
+        if random.random() < 0.15:  
             log = {
                 "timestamp": fake.iso8601(),
                 "level": "error",
